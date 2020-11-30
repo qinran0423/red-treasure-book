@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let script = document.createElement('script')
+    script.src = 'example.js'
+    script.async = false // 设置同步加载  并不是所有浏览器都支持async 属性
+    document.head.appendChild(script)
+    // 问题：这种方式对浏览器预加载器不可见，严重影响他们在资源获取队列中的优先级
+  </script>
+</body>
+</html>

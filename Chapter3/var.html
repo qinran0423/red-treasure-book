@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // function test() {
+    //   var msg = '123'
+    //   console.log(msg);
+    // }
+
+    // 声明提升
+    // function test() {
+    //   console.log(msg);
+    //   var msg = '123'
+    // }
+    // // 同上面代码
+    // function test() {
+    //   var msg;
+    //   console.log(msg);
+    //   var msg = '123'
+    // }
+
+
+    // 全局变量
+    // function test() {
+    //   msg = 'abc'
+    //   console.log(msg);
+    // }
+    // test()
+    // console.log(window.msg);
+
+    // 变量提升
+    function test() {
+      msg = 'def'
+      console.log(msg);
+      var msg
+    }
+
+    test()
+    console.log(window.msg);
+  </script>
+</body>
+</html>

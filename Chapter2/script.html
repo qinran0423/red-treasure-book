@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 1.嵌入行内javascript代码 -->
+  <script>
+    function sayHi() {
+      console.log("hi");
+    }
+    sayHi()
+
+    function sayScript() {
+      // 浏览器解析行内脚本 需要转义"\"
+      console.log("<\/script>");
+    }
+    sayScript()
+  </script>
+
+  <!-- 2. 加载外部文件 -->
+  <script src="example.js"></script>
+
+
+  <!-- ! 如果两者都提供，浏览器只会下载并执行脚本文件，忽略行内代码 -->
+  <script src="example.js">
+    console.log('example111');
+  </script>
+
+  <!-- script  img 等 请求不受浏览器同源策略限制（处理跨域）， 但返回并执行的Javascript则受限制 -->
+</body>
+</html>
