@@ -8,14 +8,30 @@
 <body>
   <script>
 
-    console.log(NaN == NaN);
+    console.log(NaN == NaN); // false
 
 
-    console.log(isNaN(NaN));
-    console.log(isNaN(10));
-    console.log(isNaN('10'));
-    console.log(isNaN('blue'));
-    console.log(isNaN(true));
+    console.log(isNaN(NaN)); // true
+    console.log(isNaN(10)); //false
+    console.log(isNaN('10')); // false
+    console.log(isNaN('blue')); // true
+    console.log(isNaN(true)); // false
+
+    // NUmber parseFloat parseInt 用于非数值转换为数值
+    console.log(Number(1.1)); // 1.1
+    console.log(Number('0xf')) // 15
+    console.log(Number('hello')) // NaN
+    console.log(Number('')) // 0
+    console.log(Number('000011')) // 11
+    console.log(Number(true)) // 1
+    let obj = {}
+    console.log(Number(obj)) // NaN
+
+
+
+    
+
+   
     
   </script>
 </body>
