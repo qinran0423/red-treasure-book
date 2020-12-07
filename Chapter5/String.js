@@ -27,3 +27,15 @@ console.log(stringValue.lastIndexOf('o')); // 7
 
 console.log(stringValue.indexOf('o', 6)) // 7
 console.log(stringValue.lastIndexOf('o', 6)); // 4
+
+
+// 字符串包含方法
+
+let msg = 'foobarbaz'
+console.log(msg.startsWith('foo')); //true
+console.log(msg.startsWith('bar')); //false
+console.log(msg.endsWith('baz')); //true
+console.log(msg.endsWith('bar'));//false
+console.log(msg.includes('bar')); // true
+console.log(msg.includes('foo'));// true
+
