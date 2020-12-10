@@ -16,6 +16,19 @@
   o.sayColor() // red
 
 
+  window.identity = 'The Window'
+  let obj = {
+    identity: 'My Object',
+    getIdentityFunc() {
+      // let that = this
+      // return function() {
+      //   return that.identity
+      // }
+      return this.identity
+    }
+  }
 
+
+  console.log(obj.getIdentityFunc());
 
 </script>

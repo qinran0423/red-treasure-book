@@ -14,6 +14,6 @@ function sayHi() {
 
 console.log(sayName.length); // 1
 console.log(sum.length); // 2
-console.log(sayHi.length); // 0
+console.log(sayHi.length); // 0 
 
 
