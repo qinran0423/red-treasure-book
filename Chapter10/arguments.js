@@ -9,8 +9,6 @@ function sayHi1() {
 
 sayHi('randy', 'niu')
 
-
-
 let values = [1,2,3,4]
 function getSum() {
   let sum = 0
@@ -22,3 +20,5 @@ function getSum() {
 
 console.log(getSum.apply(null, values)); // 10
 console.log(getSum(...values)); // 10
+
+
