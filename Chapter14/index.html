@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="box"></div>
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+  <script>
+
+    let node1 = document.getElementById('box')
+    console.log(node1.nodeType); // 1 元素节点
+    console.log(node1.nodeName); // DIV 元素标签名
+
+
+    let ulnode = document.getElementsByTagName('ul')
+    let list1 = ulnode[0].childNodes[0]
+    let list2 = ulnode[0].childNodes[1]
+    console.log(ulnode);
+    console.log(ulnode[0].childNodes);
+    // 类数组 => 真实数组
+    let arrayOfNodes = Array.prototype.slice.call(ulnode[0].childNodes)
+    console.log(arrayOfNodes);
+    let arrayOfNodes1 = Array.from(ulnode[0].childNodes)
+
+    // 下一个兄弟节点
+    let nextSiblingnode = list1.nextSibling
+    console.log(nextSiblingnode);
+    // 上一个兄弟节点
+    let previousnode = list2.previousSibling
+    console.log(previousnode);
+
+    //  查找有没子节点
+    console.log(node1.hasChildNodes()); //false
+    
+
+
+  </script>
+</body>
+</html>

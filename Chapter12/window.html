@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var age = 29
+    var sayAge = () => alert(this.age)
+    // alert(window.age) //29  
+    // sayAge() // 29
+    // window.sayAge() // 29
+
+
+
+    // var newValue = oldValue
+
+    var newValue = window.oldValue
+    console.log(newValue); // undefined
+
+
+    window.moveTo(0,0)
+    window.moveBy(0, 100)
+
+
+    
+  </script>
+</body>
+</html>

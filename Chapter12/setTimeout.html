@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    // let timeoutId = setTimeout(() => {
+    //   console.log('hello world');
+    // }, 1000)
+
+    // clearTimeout(timeoutId)
+
+
+    // let num = 0, intervalId = null;
+    // let max = 10
+
+    // let incrementNumber = function() {
+    //   num++
+
+    //   if(num == max) {
+    //     clearInterval(intervalId)
+    //     console.log("Done");
+    //   }
+    // }
+
+
+    // intervalId = setInterval(incrementNumber, 500)
+
+
+    let num = 0;
+    let max = 10;
+    let incrementNumber = function() {
+      num ++
+      if(num < max) {
+        setTimeout(incrementNumber, 500);
+      } else {
+        alert("done")
+      }
+    } 
+    setTimeout(incrementNumber, 500);
+  </script>
+</body>
+</html>
