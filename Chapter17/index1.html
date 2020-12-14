@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="button" value="button" id="btn">
+  <script>
+
+      let btn = document.getElementById('btn')
+      // btn.onclick = function(event) {
+      //   console.log(event.currentTarget === this); // true
+      //   console.log(event.target === this); // true
+      // }
+
+      document.body.onclick = function(event) {
+        
+        console.log(event.currentTarget === this); // true
+        console.log(event.target === this); //  false
+
+        console.log(event.currentTarget === document.body);// true
+        console.log(this ===  document.body); // true
+        console.log(event.target === btn);// true
+      }
+  </script>
+</body>
+</html>

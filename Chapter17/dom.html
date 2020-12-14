@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="button" id="mybtn" value="click">
+  <script>
+    // let btn = document.getElementById('mybtn')
+    // btn.onclick = function () {
+    //   console.log("Clicked");
+    // }
+
+
+
+    // btn.addEventListener('click', () => {
+    //   console.log(this);
+    // }, false)
+
+
+
+    // 跨浏览器事件处理程序
+    var EventUtil = {
+      addHandle: function(element, type, handler) {
+        if(element.addEventListener) {
+          element.addEventListener(type, handler, false)
+        } else if(element.attachEvent) {
+          element.attachEvent("on"+ type, handler)
+        } else {
+          element["on"+ type] = handler
+        }
+      },
+      removeHandle: function(element, type, handler) {
+        if(element.removeEventListener) {
+          element.removeEventListener(type, handler, false)
+        } else if(element.detachEvent) {
+          element.detachEvent("on"+ type, handler)
+        } else {
+          element["on"+type] = null
+        }
+      }
+    }
+    let btn = document.getElementById('mybtn')
+    let handler = function () {
+      console.log('click');
+    }
+
+    EventUtil.addHandle(btn, 'click', handler)
+
+    EventUtil.removeHandle(btn, 'click', handler)
+
+
+  </script>
+</body>
+</html>

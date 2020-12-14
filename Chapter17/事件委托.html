@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul id="myLinks">
+    <li id="goSomewhere">Go somewhere</li>
+    <li id="doSomething">Do something</li>
+    <li id="sayHi">Say hi</li>
+  </ul>
+
+  <script>
+    let list = document.getElementById('myLinks')
+
+    list.addEventListener('click', (event) => {
+      let target = event.target
+      console.log(target);
+      switch(target.id) {
+        case "goSomewhere":
+          location.href = 'http://www.wrox.com';
+          break;
+        case "goSomewhere":
+          document.title = 'I changed the document\'s title'
+          break;
+        case "sayHi":
+          console.log('hi');
+          break;
+        
+      }
+    })
+
+
+  </script>
+</body>
+</html>
