@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    // let observer = new MutationObserver(() => console.log('DOM was mutated'))
+
+    // observer.observe(document.body, {attributes: true})
+
+    // document.body.className = 'foo'
+    //  DOM was mutated
+
+    let observer = new MutationObserver((mutationRecords) => console.log(mutationRecords.map((x) => x.target)))
+
+    observer.observe(document.body, {attributes: true})
+
+    document.body.setAttribute('foo', 'bar')
+    // observer.disconnect()  没有日志输出
+    
+    setTimeout(() => {
+      observer.disconnect()
+      document.body.className = 'bar'
+    }, 0);
+    document.body.setAttribute('baz', 'foo', 'bar')
+  </script>
+</body>
+</html>

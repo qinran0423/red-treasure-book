@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul id="myList"></ul>
+
+  <script>
+
+    let fragment = document.createDocumentFragment()
+    let ul = document.getElementById('myList')
+
+    for(let i = 0; i < 3; i++) {
+      let li = document.createElement('li')
+      li.appendChild(document.createTextNode(`Item ${i + 1}`))
+      fragment.appendChild(li)
+    }
+
+    console.log(fragment);
+    ul.appendChild(fragment)
+  </script>
+</body>
+</html>

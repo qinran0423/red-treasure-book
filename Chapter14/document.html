@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>         
+</head>
+<body>
+  <div id="myDiv" class="bd" title="Body text" lang="en" dir="ltr"></div>
+</body>
+<script>
+
+  console.log(document.nodeType); // 9
+  console.log(document.nodeName); // #doucment
+
+  let html = document.documentElement
+  console.log(html === document.childNodes[0])
+
+
+  console.log(document.title); //Document
+  document.title = "New page title"
+  console.log(document.title); //New page title
+
+
+
+  let div = document.getElementById('myDiv')
+  console.log(div.tagName); //DIV
+  console.log(div.tagName == div.nodeName); // true
+
+  console.log(div.id); //myDiv
+  console.log(div.className); //bd
+  console.log(div.title); //Body text
+  console.log(div.lang); //en
+  console.log(div.dir); //ltr
+
+  console.log(div.getAttribute('id')); //myDiv
+  console.log(div.getAttribute('class')); //bd
+  console.log(div.getAttribute('title')); //Body text
+  console.log(div.getAttribute('lang')); //en
+  console.log(div.getAttribute('dir')); //ltr
+
+  let div1 = document.createElement('div')
+  div1.id = "myNewDiv"
+  div1.className = "box"
+  let textNode = document.createTextNode('Randy')
+  div1.appendChild(textNode)
+  document.body.appendChild(div1)
+
+</script>
+</html>

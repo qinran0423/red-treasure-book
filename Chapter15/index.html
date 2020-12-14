@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="myDiv" data-appid="1" data-myname="randy">
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <div class="page1"></div>
+    
+  </div>
+  <script>
+
+    let body = document.querySelector('body')
+    console.log(body);
+    let mydiv = document.querySelector('#myDiv')
+    console.log(mydiv.tagName);
+    let list = document.querySelectorAll('*')
+    console.log(list);
+    if(document.body.matches("body.page1")) {
+      console.log('true');
+    }
+
+
+    let page = document.getElementsByClassName('page1')
+    console.log(page);
+    console.log(mydiv.dataset.appid); // 1
+    console.log(mydiv.dataset.myname); // randy
+
+    // mydiv.innerHTML ='content'
+    console.log(mydiv.outerHTML);
+
+
+
+  </script>
+</body>
+</html>
