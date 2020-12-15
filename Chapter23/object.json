@@ -1,0 +1,9 @@
+{
+  "name": "randy",
+  "age": 18,
+  "school": {
+    "name":"Merrimack College",
+    "location": "North Andover, MA"
+  },
+  "value": [25,26,27]
+}

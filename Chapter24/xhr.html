@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>aaaa</div>
+  <script>
+    // readyState
+    // 0  未初始化
+    // 1  已打开 （open）.已调用open()方法，尚未调用send()方法
+    // 2  已发送(Sent) 已调用send()方法， 尚未收到响应
+    // 3  接收中(Receiving) 已经收到部分响应
+    // 4  完成(Complete) 已经收到所有响应，可以使用了
+    
+    
+    let xhr = new XMLHttpRequest()
+    
+    
+    
+    // open() 不会实际发送请求，只是为发送请求做好准备
+    xhr.open('get', 'http://localhost:3000/data', false)
+    xhr.onreadystatechange = function() {
+      if(xhr.readyState == 4) {
+        if((xhr.status>=200 && xhr.status < 300 || xhr.status == 304)) {
+          console.log(xhr.responseText);
+        } else {
+          console.log(xhr.status);
+        }
+      }
+    }
+    // 调用send()之后，请求就会发送服务器
+    xhr.send(null)
+    
+    
+    </script>
+</body>
+</html>
