@@ -1,16 +1,31 @@
 <script>
 
 
-  function Person(name, age, job) {
-    this.name = name
-    this.age = age
-    this.job = job
-    this.sayName = function () {
-      console.log(this.name);
-    }
-  }
+function Person() {
+}
+Person.prototype.name = 'Randy'
+Person.prototype.age = 30
+Person.prototype.job = '程序员'
+Person.prototype.sayName = function () {  
+  console.log(this.name);
+}
+
+let person = new Person()
+
+console.log(person);
 
 
-  console.log(Person.prototype);
+console.log(typeof Person.prototype); // object
+console.log(Person.prototype); 
+// {
+//  constructor: ƒ Person1(),
+//  __proto__: Object
+//}
+
+console.log(Person.prototype.isPrototypeOf(person)); // true
+console.log(Object.getPrototypeOf(person) === Person.prototype); // true
+
+
+
 
 </script>
