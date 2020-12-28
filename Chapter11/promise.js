@@ -13,11 +13,7 @@ setTimeout(() => {
   console.log(p2); //  Promise {<rejected>: undefined}
 }, 0);
 
-
-
-
 setTimeout(() => {
-  
   console.log(Promise.resolve(3)); // Promise <resolved> : 3
 }, 0);
 
@@ -27,4 +23,9 @@ let p = Promise.resolve(7)
 setTimeout(() => {
   console.log(p === Promise.resolve(p)); // true
   console.log(p === Promise.resolve(Promise.resolve(p))); // true
+  console.log(Promise.resolve(Promise.reject(' Error ')));
 }, 0);
+
+
+
+
