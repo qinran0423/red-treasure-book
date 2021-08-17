@@ -43,3 +43,9 @@
 console.log(parseInt('')); // NaN
 console.log(parseInt('123ww'));
 console.log(parseInt('22.3'));
+
+
+// Symbol: 确保对象属性使用唯一标识符
+// 用来创建唯一记号，进而用作非字符串形式的对象属性
+let sym = Symbol()
+console.log(typeof sym);
